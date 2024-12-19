@@ -29,91 +29,142 @@ Publish the website in the given URL.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gallery</title>
     <style>
-         .gallery
+        #flexbox
         {
-        background: linear-gradient(rgba(14, 22, 17, 0.605),rgba(30, 33, 30, 0.7)),url(Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg);
-        background-size: cover  ;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+            
+            padding: 100px;
+            background-color: aliceblue;
         }
-        
-        
-         *{
-            margin: 0;
-            padding: 0;
+        #container1
+        {
+            
+            display: flex;
+            background-color: aliceblue;
+            gap: 20px;
+            justify-content: center;
+            padding: 10px;
+            padding: 40px;
+            box-shadow: 0 2px 3px;
         }
-        .preview {
-    width: 150px;
-    border: 3px solid transparent;
-    transition: border-color 0.3s, transform 0.3s;
-    cursor: pointer;
-    border-radius: 4px;
-      }
-
-.preview:hover {
-    border-color: #dce5ee;
-    transform: scale(1.05);
-}
-
-        
-
-      .gallery img 
-       {
-        min-width: 0;
-        flex: 1 1 10px;
-        object-fit: cover;
-        
-        transition: 0.5s;
-       }
-       .gallery img:hover 
-       {
-        flex: 1 1 280px;
-        
-       }
+        #container2
+        {
+            gap: 20px;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: center;
+            
+            padding: 10px;
+            box-shadow:0 2px 3px;
+        }
+        .img
+        {
+            height: 150px;
+            width: 250px;
+            
+            image-rendering:optimizeQuality;    
+            border: 2px inset whitesmoke;    
+            border-radius: 10px;
+            box-shadow:  0 0 10px black ;
+            transition: 0.5s;
+        }
+        .img:hover
+        {
+            content: 'hello';
+            transform: scale(1.3);
+        }
+        #divs
+        {
+            display: inline;
+        }
+        #image
+        {
+            z-index: 100;
+            display: none;
+            background: rgba(26, 24, 24, 0.5);
+            position: fixed;
+            width: 100%;
+            
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            align-items: center;
+            justify-content: center;    
+        }
+        #image img{
+            width: 600px;
+            height: auto;
+        }
+        #title
+        {
+            background-color: bisque;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 10px;
+            width: 500px;
+            transition: 0.5s;
+            box-shadow: 0 3px 10px;
+            position: absolute;
+            top: 20px;
+            padding: 20px;
+            left: 500px;
+        }
+        #title:hover{
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
+    <section id="image">
+            <img src=" " alt="" id="display" onclick="closes()" style="height: 900px; width: auto; border: 10px inset black;">
+    </section>
+<div id="flexbox">
+
+    <h1 align="center" ><span id="title">Gallery 360</span></h1>
+
+    <div id="container1">
+        <div class="divs"><img class="img" src="f1.jpg" onclick="opens(this.src)" alt=""></div>
+        <div class="divs"><img class="img" src="f2.jpg" onclick="opens(this.src)"   alt=""></div>
+        <div class="divs"><img class="img" src="f3.jpg"  onclick="opens(this.src)"  alt=""></div>
+        <div class="divs" ><img class="img" src="f4.jpg" onclick="opens(this.src)"   alt=""></div>
+    </div>
+    <div id="container2">
+        <div class="divs" ><img class="img" src="f5.jpg" onclick="opens(this.src)"  alt=""></div>
+        <div class="divs"><img class="img" src="f6.jpg" onclick="opens(this.src)"  alt=""></div>
+        <div class="divs" ><img class="img" src="f7.jpg" onclick="opens(this.src)"  alt=""></div>
+       <div class="divs"><img class="img" src="f8.jpg" onclick="opens(this.src)"  alt=""> </div>
+    </div>
     
-      <div class="gallery">
-        <img class="preview" src="download.jpeg"/>
-        <img class="preview" src="images (4).jpeg"/>
-        <img class="preview" src="images (1).jpeg"/>
-        <img class="preview" src="images (2).jpeg"/>
-        <img class="preview" src="images (5).jpeg"/>
-      </div>
+</div>
+<footer align="center" style="background-color: bisque; padding: 20px; font-size: 20px;">
     
+    <marquee  direction="left"><p>Designed & Developed by Rajashri I &copy; </p> </marquee>
+</footer>
+    <script>
+            var a =document.getElementById("image");
+            var b=document.getElementById("display");
+            function opens(c)
+            {
+                a.style.display='flex';
+                b.src=c;
+            }
+            function closes()
+            {
+                a.style.display='none';
+            }
+    </script>
 </body>
 </html>
+    
+
 ```
 # OUTPUT:
-![Screenshot 2024-12-13 222909](https://github.com/user-attachments/assets/13c13893-ea8c-4422-ac25-265e03f8089f)
 
-![gal1](https://github.com/user-attachments/assets/81174888-2719-4836-bc51-8179a415f0c0)
+![image gg new](https://github.com/user-attachments/assets/2800cff1-6c03-4d68-a17c-8e9b53309172)
 
-![cat1](https://github.com/user-attachments/assets/a65eaee8-8b29-4416-b3bb-62687c19f0ef)
+![img1](https://github.com/user-attachments/assets/b3129cfb-cbf3-42fb-8308-e5ff012069ad)
 
-![gal2](https://github.com/user-attachments/assets/f514be2f-9156-4b84-b441-1889a4c6361d)
-
-![cat2](https://github.com/user-attachments/assets/25e44f16-290b-4dcf-9b7c-f02c7330ee34)
-
-![gal3](https://github.com/user-attachments/assets/d2f2ee0e-eccf-4619-bb06-a5fd61bda73a)
-
-![cat3](https://github.com/user-attachments/assets/368744f4-c3c5-4049-ae6d-272a99d63705)
-
-![gal4](https://github.com/user-attachments/assets/00ae3320-78fb-432b-9b14-a90285a8a1e1)
-
-![cat4](https://github.com/user-attachments/assets/4b1c091e-6811-4181-b3f8-bbe766a292d0)
-
-![gal5](https://github.com/user-attachments/assets/1227c0b9-7dc1-44e9-8bc2-9dfedf501eeb)
-
-![cat5](https://github.com/user-attachments/assets/7babbaaf-0620-4a75-ba69-ff5fa73f1140)
-
+![img gal ff](https://github.com/user-attachments/assets/0def504b-77ef-445f-aa73-40b36b7cd050)
 
 # RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
